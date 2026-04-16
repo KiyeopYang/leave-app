@@ -1,0 +1,5 @@
+{
+  "rewrites": [
+    { "source": "/api/leave", "destination": "/api/leave.js" }
+  ]
+}
