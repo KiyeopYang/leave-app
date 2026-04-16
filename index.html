@@ -18,30 +18,11 @@
       padding: 2rem 1rem;
     }
 
-    .wrap {
-      width: 100%;
-      max-width: 480px;
-    }
+    .wrap { width: 100%; max-width: 480px; }
 
-    .logo {
-      text-align: center;
-      margin-bottom: 2.5rem;
-    }
-
-    .logo-mark {
-      font-size: 1.5rem;
-      font-weight: 700;
-      letter-spacing: 0.15em;
-      color: #fff;
-    }
-
-    .logo-sub {
-      font-size: 0.75rem;
-      color: #4b5563;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      margin-top: 4px;
-    }
+    .logo { text-align: center; margin-bottom: 2.5rem; }
+    .logo-mark { font-size: 1.5rem; font-weight: 700; letter-spacing: 0.15em; color: #fff; }
+    .logo-sub { font-size: 0.75rem; color: #4b5563; letter-spacing: 0.2em; text-transform: uppercase; margin-top: 4px; }
 
     .card {
       background: #13131f;
@@ -50,16 +31,9 @@
       padding: 2rem;
     }
 
-    .card-title {
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: #f0f2ff;
-      margin-bottom: 1.75rem;
-    }
+    .card-title { font-size: 1.1rem; font-weight: 600; color: #f0f2ff; margin-bottom: 1.75rem; }
 
-    .field {
-      margin-bottom: 1.25rem;
-    }
+    .field { margin-bottom: 1.25rem; }
 
     label {
       display: block;
@@ -85,10 +59,7 @@
       appearance: none;
     }
 
-    input:focus, select:focus, textarea:focus {
-      border-color: rgba(124, 106, 247, 0.5);
-    }
-
+    input:focus, select:focus, textarea:focus { border-color: rgba(124,106,247,0.5); }
     input::placeholder, textarea::placeholder { color: #2e2e4a; }
 
     select {
@@ -99,68 +70,11 @@
     }
 
     select option { background: #13131f; }
-
     textarea { resize: vertical; min-height: 80px; line-height: 1.6; }
 
-    .date-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0.75rem;
-    }
+    .date-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
 
-    .divider {
-      border: none;
-      border-top: 1px solid rgba(255,255,255,0.06);
-      margin: 1.5rem 0;
-    }
-
-    .btn {
-      width: 100%;
-      padding: 0.85rem;
-      background: #7c6af7;
-      border: none;
-      border-radius: 12px;
-      color: #fff;
-      font-size: 0.95rem;
-      font-weight: 600;
-      font-family: inherit;
-      cursor: pointer;
-      transition: background 0.15s, transform 0.1s;
-      letter-spacing: 0.02em;
-    }
-
-    .btn:hover { background: #6b59e8; }
-    .btn:active { transform: scale(0.99); }
-    .btn:disabled { background: #2e2e4a; color: #6b7280; cursor: not-allowed; transform: none; }
-
-    .status {
-      margin-top: 1rem;
-      padding: 0.75rem 1rem;
-      border-radius: 10px;
-      font-size: 0.85rem;
-      text-align: center;
-      display: none;
-    }
-
-    .status.success {
-      display: block;
-      background: rgba(16,185,129,0.1);
-      border: 1px solid rgba(16,185,129,0.25);
-      color: #10b981;
-    }
-
-    .status.error {
-      display: block;
-      background: rgba(239,68,68,0.08);
-      border: 1px solid rgba(239,68,68,0.2);
-      color: #f87171;
-    }
-
-    .type-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 0.5rem;
-    }
+    .type-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem; }
 
     .type-btn {
       padding: 0.6rem 0.5rem;
@@ -196,6 +110,69 @@
     }
 
     .summary-box.visible { display: block; }
+
+    .divider { border: none; border-top: 1px solid rgba(255,255,255,0.06); margin: 1.5rem 0; }
+
+    .btn {
+      width: 100%;
+      padding: 0.85rem;
+      background: #7c6af7;
+      border: none;
+      border-radius: 12px;
+      color: #fff;
+      font-size: 0.95rem;
+      font-weight: 600;
+      font-family: inherit;
+      cursor: pointer;
+      transition: background 0.15s, transform 0.1s;
+      letter-spacing: 0.02em;
+    }
+
+    .btn:hover { background: #6b59e8; }
+    .btn:active { transform: scale(0.99); }
+    .btn:disabled { background: #2e2e4a; color: #6b7280; cursor: not-allowed; transform: none; }
+
+    /* Success overlay */
+    .overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(10,10,18,0.92);
+      align-items: center;
+      justify-content: center;
+      z-index: 100;
+    }
+
+    .overlay.visible { display: flex; }
+
+    .success-card {
+      background: #13131f;
+      border: 1px solid rgba(124,106,247,0.3);
+      border-radius: 20px;
+      padding: 2.5rem 2rem;
+      text-align: center;
+      max-width: 360px;
+      width: 90%;
+    }
+
+    .success-icon { font-size: 3rem; margin-bottom: 1rem; }
+    .success-title { font-size: 1.15rem; font-weight: 600; color: #f0f2ff; margin-bottom: 0.5rem; }
+    .success-sub { font-size: 0.85rem; color: #6b7280; margin-bottom: 1.75rem; line-height: 1.6; }
+
+    .btn-outline {
+      width: 100%;
+      padding: 0.75rem;
+      background: transparent;
+      border: 1px solid rgba(124,106,247,0.4);
+      border-radius: 10px;
+      color: #a89cf5;
+      font-size: 0.9rem;
+      font-family: inherit;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .btn-outline:hover { background: rgba(124,106,247,0.1); }
   </style>
 </head>
 <body>
@@ -234,8 +211,8 @@
         <label>휴가 유형</label>
         <div class="type-grid">
           <button class="type-btn active" data-type="연차">🏖️ 연차</button>
-          <button class="type-btn" data-type="반차(오전)">🌅 반차(오전)</button>
-          <button class="type-btn" data-type="반차(오후)">🌇 반차(오후)</button>
+          <button class="type-btn" data-type="반차(오전)">🌅 반차 오전</button>
+          <button class="type-btn" data-type="반차(오후)">🌇 반차 오후</button>
           <button class="type-btn" data-type="병가">🏥 병가</button>
           <button class="type-btn" data-type="경조사">💐 경조사</button>
           <button class="type-btn" data-type="기타">📝 기타</button>
@@ -246,12 +223,8 @@
       <div class="field">
         <label>사용일</label>
         <div class="date-row">
-          <div>
-            <input type="date" id="date-from" placeholder="시작일">
-          </div>
-          <div>
-            <input type="date" id="date-to" placeholder="종료일 (선택)">
-          </div>
+          <input type="date" id="date-from">
+          <input type="date" id="date-to" placeholder="종료일 (선택)">
         </div>
       </div>
 
@@ -265,12 +238,25 @@
       <hr class="divider">
 
       <button class="btn" id="submit-btn" onclick="submitLeave()">신청하기</button>
-      <div class="status" id="status"></div>
+    </div>
+  </div>
+
+  <!-- Success overlay -->
+  <div class="overlay" id="overlay">
+    <div class="success-card">
+      <div class="success-icon">✅</div>
+      <div class="success-title" id="success-title">휴가 신청 완료!</div>
+      <div class="success-sub" id="success-sub"></div>
+      <button class="btn-outline" onclick="resetForm()">새로 신청하기</button>
     </div>
   </div>
 
   <script>
-    const NOTION_DB = "2f73b8a5-80dc-815b-9f5e-000b2aa4be46";
+    const WEBHOOK_URL = ''; // 나중에 연동할 때 사용
+
+    // Set today as default
+    const today = new Date().toISOString().split('T')[0];
+    document.getElementById('date-from').value = today;
 
     // Type buttons
     document.querySelectorAll('.type-btn').forEach(btn => {
@@ -282,14 +268,17 @@
       });
     });
 
-    // Date inputs
     document.getElementById('date-from').addEventListener('change', updateSummary);
     document.getElementById('date-to').addEventListener('change', updateSummary);
     document.getElementById('applicant').addEventListener('change', updateSummary);
 
-    // Set today as default
-    const today = new Date().toISOString().split('T')[0];
-    document.getElementById('date-from').value = today;
+    function formatDate(d) {
+      if (!d) return '';
+      const [y, m, day] = d.split('-');
+      const weekdays = ['일','월','화','수','목','금','토'];
+      const wd = weekdays[new Date(d).getDay()];
+      return `${m}월 ${Number(day)}일(${wd})`;
+    }
 
     function updateSummary() {
       const name = document.getElementById('applicant').value;
@@ -306,80 +295,35 @@
       summary.classList.add('visible');
     }
 
-    function formatDate(d) {
-      const [y, m, day] = d.split('-');
-      const weekdays = ['일','월','화','수','목','금','토'];
-      const wd = weekdays[new Date(d).getDay()];
-      return `${m}월 ${day}일(${wd})`;
-    }
-
-    async function submitLeave() {
+    function submitLeave() {
       const name = document.getElementById('applicant').value;
       const type = document.getElementById('leave-type').value;
       const from = document.getElementById('date-from').value;
       const to = document.getElementById('date-to').value;
       const note = document.getElementById('note').value.trim();
-      const btn = document.getElementById('submit-btn');
-      const status = document.getElementById('status');
 
-      if (!name) { showStatus('error', '신청자를 선택해주세요.'); return; }
-      if (!from) { showStatus('error', '사용일을 선택해주세요.'); return; }
+      if (!name) { alert('신청자를 선택해주세요.'); return; }
+      if (!from) { alert('사용일을 선택해주세요.'); return; }
 
-      btn.disabled = true;
-      btn.textContent = '신청 중...';
-      status.className = 'status';
-      status.style.display = 'none';
+      const fromStr = formatDate(from);
+      const toStr = to && to !== from ? ` ~ ${formatDate(to)}` : '';
 
-      // Get employee join date from our embedded data
-      const joinDates = {
-        '강다영': '2025-01-02', '김주휘': '2025-03-10', '노현일': '2026-01-19',
-        '이유나': '2026-03-09', '김시연': '2026-01-19', '최용주': '2024-10-24',
-        '김현기': '2024-11-19', '김지수': '2025-12-22', '김지혜': '2024-10-28',
-        '이채림': '2025-12-17', '육해영': '2025-11-17', '임진혁': '2025-12-15',
-        '유정민': '2025-04-01', '김상현': '2026-01-19', '이동근': '2025-10-13',
-      };
-
-      const payload = {
-        parent: { database_id: NOTION_DB },
-        properties: {
-          "신청자": { title: [{ text: { content: name } }] },
-          "휴가유형": { select: { name: type } },
-          "사용일": { date: { start: from, end: (to && to !== from) ? to : null } },
-          "신청일": { date: { start: today } },
-          "입사일": { date: { start: joinDates[name] || today } },
-          "비고": note ? { rich_text: [{ text: { content: note } }] } : { rich_text: [] },
-          "담당자 확인": { checkbox: false }
-        }
-      };
-
-      try {
-        const res = await fetch('/api/leave', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(payload)
-        });
-
-        if (res.ok) {
-          showStatus('success', `✅ ${name}님의 휴가 신청이 완료됐어요!\n노션에 저장됐습니다.`);
-          document.getElementById('note').value = '';
-          updateSummary();
-        } else {
-          const err = await res.json();
-          showStatus('error', '신청 중 오류가 발생했어요. 다시 시도해주세요.');
-          console.error(err);
-        }
-      } catch (e) {
-        showStatus('error', '네트워크 오류. 잠시 후 다시 시도해주세요.');
-      }
-
-      btn.disabled = false;
-      btn.textContent = '신청하기';
+      document.getElementById('success-title').textContent = `${name}님, 신청 완료! 🎉`;
+      document.getElementById('success-sub').textContent =
+        `${type} · ${fromStr}${toStr}${note ? '\n' + note : ''}\n\n담당자 확인 후 승인됩니다.`;
+      document.getElementById('overlay').classList.add('visible');
     }
 
-    function showStatus(type, msg) {
-      const el = document.getElementById('status');
-      el.className = `status ${type}`;
-      el.textContent = msg;
+    function resetForm() {
+      document.getElementById('overlay').classList.remove('visible');
+      document.getElementById('applicant').value = '';
+      document.getElementById('note').value = '';
+      document.getElementById('date-from').value = today;
+      document.getElementById('date-to').value = '';
+      document.querySelectorAll('.type-btn').forEach(b => b.classList.remove('active'));
+      document.querySelector('[data-type="연차"]').classList.add('active');
+      document.getElementById('leave-type').value = '연차';
+      document.getElementById('summary').classList.remove('visible');
     }
 
     updateSummary();
